@@ -87,7 +87,7 @@ for (let i = 0; i < plants.length; i++) {
   // div 의 이미지
   // 이미지 파일명을 영어로 수정 시, ${plants[i].engName} 으로 바꾸기
   const img = divArr[i].querySelector("img");
-  img.setAttribute("src", `./images/${plants[i].korName}.jpg`);
+  img.setAttribute("src", `../public/images/${plants[i].korName}.jpg`);
 
   // 클래스명 추가 - easy/hard, short/long, air, pet, big, deco
   plants[i].isEasy === "easy"
