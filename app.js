@@ -6,6 +6,8 @@ const app = express();
 const PORT = 4000;
 
 const mainRouter = require('./routes/index');
+const registerRouter = require('./routes/register');
+const loginRouter = require('./routes/login');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,10 +15,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 app.use(express.static('pulic'));
 app.use('/', mainRouter);
-
-app.use('/', (req, res) => {
-  res.send('연결 성공');
-});
+app.use('/register', registerRouter);
+app.use('/login', loginRouter);
 
 app.use((err, req, res, next) => {
   console.log(err.stack);
