@@ -4,4 +4,12 @@ module.exports = {
     'linebreak-style': 0,
     'no-console': 'off',
   },
+  // node: true,
+  parseOptions: {
+    ecmaVersion: 'latest',
+  },
+  env: {
+    es6: true,
+  },
+  treatUndefinedAsUnspecified: true,
 };
