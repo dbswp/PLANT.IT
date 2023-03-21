@@ -5,9 +5,10 @@ require('dotenv').config();
 const app = express();
 const PORT = 4000;
 
-const mainRouter = require('./routes/index');
+const mainRouter = require('./routes/');
 const registerRouter = require('./routes/register');
 const loginRouter = require('./routes/login');
+const homeRouter = require('./routes/main');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,6 +18,7 @@ app.use(express.static('pulic'));
 app.use('/', mainRouter);
 app.use('/register', registerRouter);
 app.use('/login', loginRouter);
+app.use('/main', homeRouter);
 
 app.use((err, req, res, next) => {
   console.log(err.stack);
