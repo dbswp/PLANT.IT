@@ -122,12 +122,12 @@ content.innerHTML = `<p>${param.content}</p>`;
 const img = document.querySelectorAll(".swiper-slide img");
 img.forEach(function (e) {
   for (let i = 0; i < img.length; i++) {
-    img[i].setAttribute("src", `./images/${param.recomend[i % 4]}.jpg`);
+    img[i].setAttribute("src", `../public/images/${param.recomend[i % 4]}.jpg`);
   }
 });
 
 const character = document.querySelector(".character img");
-character.setAttribute("src", `./images/${param.svg}.svg`);
+character.setAttribute("src", `../public/images/${param.svg}.svg`);
 document.querySelector(".recomend .textBox a").style.color = param.color;
 
 const backBtn = document.querySelectorAll(".path-box a");
